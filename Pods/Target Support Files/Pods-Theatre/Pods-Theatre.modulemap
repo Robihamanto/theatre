@@ -1,0 +1,6 @@
+framework module Pods_Theatre {
+  umbrella header "Pods-Theatre-umbrella.h"
+
+  export *
+  module * { export * }
+}

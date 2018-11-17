@@ -1,0 +1,6 @@
+framework module VanillaConstraints {
+  umbrella header "VanillaConstraints-umbrella.h"
+
+  export *
+  module * { export * }
+}

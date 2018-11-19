@@ -23,6 +23,13 @@
 		F4D7283D21951029007E36EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7283C21951029007E36EA /* HomeViewController.swift */; };
 		F4D7283F21951031007E36EA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7283E21951031007E36EA /* HomeViewModel.swift */; };
 		F4D72841219510E3007E36EA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D72840219510E3007E36EA /* Movie.swift */; };
+		F4F9169321A00428005E7DEE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9169221A00428005E7DEE /* UIImage+Extension.swift */; };
+		F4F9169521A011C5005E7DEE /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9169421A011C5005E7DEE /* UITableView+Extension.swift */; };
+		F4F9169821A165F1005E7DEE /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9169621A165F1005E7DEE /* HomeViewCell.swift */; };
+		F4F9169921A165F1005E7DEE /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F9169721A165F1005E7DEE /* HomeViewCell.xib */; };
+		F4F9169B21A166DA005E7DEE /* HomeViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9169A21A166DA005E7DEE /* HomeViewCellModel.swift */; };
+		F4F9169E21A182EF005E7DEE /* ClassIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9169D21A182EF005E7DEE /* ClassIdentifiable.swift */; };
+		F4F916A021A1835A005E7DEE /* NibIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9169F21A1835A005E7DEE /* NibIdentifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +67,13 @@
 		F4D7283C21951029007E36EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F4D7283E21951031007E36EA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F4D72840219510E3007E36EA /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F4F9169221A00428005E7DEE /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		F4F9169421A011C5005E7DEE /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		F4F9169621A165F1005E7DEE /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		F4F9169721A165F1005E7DEE /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
+		F4F9169A21A166DA005E7DEE /* HomeViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCellModel.swift; sourceTree = "<group>"; };
+		F4F9169D21A182EF005E7DEE /* ClassIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassIdentifiable.swift; sourceTree = "<group>"; };
+		F4F9169F21A1835A005E7DEE /* NibIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibIdentifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +138,9 @@
 		F45E665F21952D770087EF4D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F4F9169621A165F1005E7DEE /* HomeViewCell.swift */,
+				F4F9169721A165F1005E7DEE /* HomeViewCell.xib */,
+				F4F9169A21A166DA005E7DEE /* HomeViewCellModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -151,6 +168,7 @@
 		F4D7281521950C93007E36EA /* Theatre */ = {
 			isa = PBXGroup;
 			children = (
+				F4F9169121A00412005E7DEE /* Extension */,
 				F4D7283A21950E37007E36EA /* Utils */,
 				F4D7283921950E2E007E36EA /* Services */,
 				F4D7283821950E28007E36EA /* Models */,
@@ -222,6 +240,25 @@
 				F4D7283E21951031007E36EA /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		F4F9169121A00412005E7DEE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F4F9169C21A182D9005E7DEE /* Identifiable */,
+				F4F9169221A00428005E7DEE /* UIImage+Extension.swift */,
+				F4F9169421A011C5005E7DEE /* UITableView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F4F9169C21A182D9005E7DEE /* Identifiable */ = {
+			isa = PBXGroup;
+			children = (
+				F4F9169D21A182EF005E7DEE /* ClassIdentifiable.swift */,
+				F4F9169F21A1835A005E7DEE /* NibIdentifiable.swift */,
+			);
+			path = Identifiable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D7282121950C96007E36EA /* LaunchScreen.storyboard in Resources */,
+				F4F9169921A165F1005E7DEE /* HomeViewCell.xib in Resources */,
 				F4D7281E21950C96007E36EA /* Assets.xcassets in Resources */,
 				F4D7281C21950C93007E36EA /* Main.storyboard in Resources */,
 			);
@@ -410,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F45E665C21951F400087EF4D /* Collection.swift in Sources */,
+				F4F9169B21A166DA005E7DEE /* HomeViewCellModel.swift in Sources */,
 				F4D7281921950C93007E36EA /* ViewController.swift in Sources */,
 				F4D7281721950C93007E36EA /* AppDelegate.swift in Sources */,
 				F4D7283D21951029007E36EA /* HomeViewController.swift in Sources */,
@@ -417,8 +456,13 @@
 				F45E665521951B0B0087EF4D /* Theatre.swift in Sources */,
 				F45E665E219520880087EF4D /* Result.swift in Sources */,
 				F4D7283F21951031007E36EA /* HomeViewModel.swift in Sources */,
+				F4F916A021A1835A005E7DEE /* NibIdentifiable.swift in Sources */,
+				F4F9169E21A182EF005E7DEE /* ClassIdentifiable.swift in Sources */,
+				F4F9169821A165F1005E7DEE /* HomeViewCell.swift in Sources */,
 				F45E665A21951F020087EF4D /* MovieService.swift in Sources */,
+				F4F9169321A00428005E7DEE /* UIImage+Extension.swift in Sources */,
 				F4D72841219510E3007E36EA /* Movie.swift in Sources */,
+				F4F9169521A011C5005E7DEE /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

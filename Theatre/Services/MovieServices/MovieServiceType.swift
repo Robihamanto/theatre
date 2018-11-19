@@ -10,6 +10,5 @@ import Foundation
 import RxSwift
 
 protocol MovieServiceType {
-    func fetchPhotos(withCollection collection: Collection, completion: @escaping(([Movie], Bool) -> ()))
-    func fetchPhotos(withCollection collection: Collection) -> Observable<[Movie]>
+    func fetchMovies(withCollection collection: Collection,andPage page: Int) -> Observable<[Movie]>
 }

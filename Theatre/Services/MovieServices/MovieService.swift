@@ -19,8 +19,8 @@ struct MovieService: MovieServiceType {
         self.provider = provider
     }
     
-    func fetchPhotos(withCollection collection: Collection) -> Observable<[Movie]> {
-        return provider.rx.request(.movies(collection: collection.string))
+    func fetchMovies(withCollection collection: Collection, andPage page: Int) -> Observable<[Movie]> {
+        return provider.rx.request(.movies(collection: collection.string, page: page))
         .asObservable()
         .filterSuccessfulStatusAndRedirectCodes()
         .mapJSON()
@@ -30,29 +30,4 @@ struct MovieService: MovieServiceType {
             return movies
         }
     }
-    
-    
-    
-    
-    
-    
-    func fetchPhotos(withCollection collection: Collection, completion: @escaping ([Movie], Bool) -> ()) {
-
-        let movies: Theatre = .movies(collection: "upcoming")
-
-        provider.request(movies) { (result) in
-            switch result {
-            case .success(let response):
-                guard let data = try? JSONDecoder().decode( MovieResponse.self, from: response.data) as MovieResponse else {
-                    completion([], false)
-                    return
-                }
-                completion(data.results ?? [], true)
-            case .failure(let error):
-                completion([], false)
-                print(error.errorDescription ?? "")
-            }
-        }
-    }
-    
 }

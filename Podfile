@@ -21,7 +21,7 @@ target 'Theatre' do
   pod 'Nuke'
 
   # Transition
-  pod 'Hero'
+  pod 'Hero'git
 
   # Constraints
   pod 'VanillaConstraints'

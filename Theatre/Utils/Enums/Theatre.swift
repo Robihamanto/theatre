@@ -12,7 +12,7 @@ import Moya
 enum Theatre {
     // fetch list of photo
     case movies(
-        collection: String)
+        collection: String, page: Int)
 }
 
 extension Theatre: TargetType {
@@ -26,7 +26,7 @@ extension Theatre: TargetType {
     var path: String {
         switch self {
         case let .movies(param):
-            return "/movie/\(param)"
+            return "/movie/\(param.collection)"
         }
     }
     
@@ -39,9 +39,10 @@ extension Theatre: TargetType {
     
     var task: Task {
         switch self {
-        case .movies:
+        case let .movies(param):
             var params: [String: Any] = [:]
             params["api_key"] = "da209a7103025d781fc585c70b0816fb"
+            params["page"] = "\(param.page)"
             return .requestParameters(
                 parameters: params,
                 encoding: URLEncoding.default)
